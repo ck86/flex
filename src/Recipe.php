@@ -77,6 +77,9 @@ class Recipe
             return '';
         }
 
+        $matches[3] = 'ck86/recipes';
+        $matches[4] = 'feature/make-config-dir-configurable';
+
         return sprintf('https://%s/tree/%s/%s/%s', $matches[3], $matches[4], $matches[1], $matches[2]);
     }
 
