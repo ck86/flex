@@ -62,6 +62,8 @@ class CopyFromRecipeConfigurator extends AbstractConfigurator
             mkdir(dirname($to), 0777, true);
         }
 
+        $contents = $this->options->expandTargetDir($contents);
+
         file_put_contents($to, $contents);
         if ($executable) {
             @chmod($to, fileperms($to) | 0111);
